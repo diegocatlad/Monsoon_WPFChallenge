@@ -11,3 +11,7 @@ D:\Decadentes\Mis programas\Monsoon\WPFChallenge-master\Monsoon_WPFChallenge\WPF
 D:\Decadentes\Mis programas\Monsoon\WPFChallenge-master\Monsoon_WPFChallenge\WPFChallenge\obj\Debug\WPFChallenge.csproj.GenerateResource.Cache
 D:\Decadentes\Mis programas\Monsoon\WPFChallenge-master\Monsoon_WPFChallenge\WPFChallenge\obj\Debug\WPFChallenge.exe
 D:\Decadentes\Mis programas\Monsoon\WPFChallenge-master\Monsoon_WPFChallenge\WPFChallenge\obj\Debug\WPFChallenge.pdb
+D:\Decadentes\Mis programas\Monsoon\WPFChallenge-master\Monsoon_WPFChallenge\WPFChallenge\obj\Debug\OptionCircle.baml
+D:\Decadentes\Mis programas\Monsoon\WPFChallenge-master\Monsoon_WPFChallenge\WPFChallenge\obj\Debug\OptionCircle.g.cs
+D:\Decadentes\Mis programas\Monsoon\WPFChallenge-master\Monsoon_WPFChallenge\WPFChallenge\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Decadentes\Mis programas\Monsoon\WPFChallenge-master\Monsoon_WPFChallenge\WPFChallenge\obj\Debug\WPFChallenge_MarkupCompile.lref
