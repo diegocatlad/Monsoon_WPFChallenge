@@ -1,0 +1,13 @@
+D:\Decadentes\Mis programas\Monsoon\WPFChallenge-master\Monsoon_WPFChallenge\WPFChallenge\bin\Debug\WPFChallenge.exe.config
+D:\Decadentes\Mis programas\Monsoon\WPFChallenge-master\Monsoon_WPFChallenge\WPFChallenge\bin\Debug\WPFChallenge.exe
+D:\Decadentes\Mis programas\Monsoon\WPFChallenge-master\Monsoon_WPFChallenge\WPFChallenge\bin\Debug\WPFChallenge.pdb
+D:\Decadentes\Mis programas\Monsoon\WPFChallenge-master\Monsoon_WPFChallenge\WPFChallenge\obj\Debug\WPFChallenge.csprojResolveAssemblyReference.cache
+D:\Decadentes\Mis programas\Monsoon\WPFChallenge-master\Monsoon_WPFChallenge\WPFChallenge\obj\Debug\MainWindow.baml
+D:\Decadentes\Mis programas\Monsoon\WPFChallenge-master\Monsoon_WPFChallenge\WPFChallenge\obj\Debug\MainWindow.g.cs
+D:\Decadentes\Mis programas\Monsoon\WPFChallenge-master\Monsoon_WPFChallenge\WPFChallenge\obj\Debug\App.g.cs
+D:\Decadentes\Mis programas\Monsoon\WPFChallenge-master\Monsoon_WPFChallenge\WPFChallenge\obj\Debug\WPFChallenge_MarkupCompile.cache
+D:\Decadentes\Mis programas\Monsoon\WPFChallenge-master\Monsoon_WPFChallenge\WPFChallenge\obj\Debug\WPFChallenge.g.resources
+D:\Decadentes\Mis programas\Monsoon\WPFChallenge-master\Monsoon_WPFChallenge\WPFChallenge\obj\Debug\WPFChallenge.Properties.Resources.resources
+D:\Decadentes\Mis programas\Monsoon\WPFChallenge-master\Monsoon_WPFChallenge\WPFChallenge\obj\Debug\WPFChallenge.csproj.GenerateResource.Cache
+D:\Decadentes\Mis programas\Monsoon\WPFChallenge-master\Monsoon_WPFChallenge\WPFChallenge\obj\Debug\WPFChallenge.exe
+D:\Decadentes\Mis programas\Monsoon\WPFChallenge-master\Monsoon_WPFChallenge\WPFChallenge\obj\Debug\WPFChallenge.pdb
