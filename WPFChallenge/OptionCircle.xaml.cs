@@ -17,6 +17,8 @@ using System.Windows.Shapes;
 using System.Windows.Media;
 using System.Threading;
 using Microsoft.Expression.Media;
+using System.Windows.Threading;
+using System.Media;
 
 namespace WPFChallenge
 {
@@ -96,7 +98,18 @@ namespace WPFChallenge
         public void GetRandomValue()
         {
             var rnd = new Random();
-            SelectedOption = Options[rnd.Next(Options.Count)];
+            var count = 0;
+            var timer = new DispatcherTimer { Interval = TimeSpan.FromMilliseconds(200) };
+            timer.Start();
+            timer.Tick += (sender, args) =>
+            {
+                count++;
+                SelectedOption = Options[rnd.Next(Options.Count)];
+                if (count == 27)
+                {
+                    timer.Stop();
+                }
+            };
         }
 
         private void RefreshSurroundingArcs(int p)
@@ -119,6 +132,8 @@ namespace WPFChallenge
 
                 var angleSize = 360 / Options.Count;
                 var selectedOptionIndex = Options.IndexOf(SelectedOption);
+
+                // Iterate each option and calculate begin and end angle
                 for (int i = 0; i < Options.Count; i++)
                 {
                     var endAngle = angleSize * i + angleSize;
@@ -127,6 +142,7 @@ namespace WPFChallenge
                     var startPointY = center.Y + radius * Math.Sin(angleSize * i * Math.PI / 180);
                     var startPoint = new Point(startPointX, startPointY);
 
+                    // Iterate each option and generate points to be connected between the begin and end angles
                     for (int j = angleSize * i; j < endAngle - 10; j++)
                     {
                         var arcSeg = new ArcSegment();
@@ -140,6 +156,7 @@ namespace WPFChallenge
                         arcSeg.Point = nextPoint;
                         arcSeg.Size = new Size(130, 130);
 
+                        // Insert into the path figure for the selected option
                         if (i == selectedOptionIndex)
                         {
                             var selectedPathFigure = new PathFigure();
@@ -147,6 +164,7 @@ namespace WPFChallenge
                             selectedPathFigure.Segments.Add(arcSeg);
                             selectedPathFigureCollection.Add(selectedPathFigure);
                         }
+                        // Insert into the path figure for the unselected options
                         else
                         {
                             var pathFigure = new PathFigure();

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -22,7 +23,6 @@ namespace WPFChallenge
     /// </summary>
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
-        public string Options1 { get; set; }
         public MainWindow()
         {
             InitializeComponent();
@@ -38,6 +38,20 @@ namespace WPFChallenge
 
         private void btnShuffle_Click(object sender, RoutedEventArgs e)
         {
+            // Create a thread
+            var soundThread = new Thread(new ThreadStart(() =>
+            {
+                var mplayer = new MediaPlayer();
+                mplayer.Open(new Uri(@"sounds/countdown.mp3", UriKind.Relative));
+                mplayer.Play();
+
+                System.Windows.Threading.Dispatcher.Run();
+            }));
+            soundThread.SetApartmentState(ApartmentState.STA);
+            // Make the thread a background thread
+            soundThread.IsBackground = true;
+            soundThread.Start();
+
             var optionCircles = GetLogicalChildCollection<OptionCircle>(mainGrid);
             foreach (var optionCircle in optionCircles)
             {
@@ -66,6 +80,15 @@ namespace WPFChallenge
                     }
                     GetLogicalChildCollection(depChild, logicalCollection);
                 }
+            }
+        }
+
+        private void btnGo_Click(object sender, RoutedEventArgs e)
+        {
+            var result = MessageBox.Show("Great choice! Let's move on to the next screen.", "Confirmation", MessageBoxButton.OKCancel);
+            if (result == MessageBoxResult.OK)
+            {
+                Application.Current.Shutdown();
             }
         }
     }

@@ -59,9 +59,9 @@
                 <ColumnDefinition Width="15*"></ColumnDefinition>
                 <ColumnDefinition Width="55*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-                <Button Grid.Column="0" Style="{StaticResource MenuButton}" Content="{StaticResource imgSearch}"  Name="btnSearch"></Button>
-                <Button Grid.Column="1" Style="{StaticResource MenuButton}" Content="{StaticResource imgCalendar}"  Name="btnCalendar"></Button>
-                <Button Grid.Column="2" Style="{StaticResource MenuButton}" Content="{StaticResource imgCompass}"  Name="btnCompass"></Button>
+            <Button Grid.Column="0" Style="{StaticResource MenuButton}" Content="{StaticResource imgSearch}"  Name="btnSearch"></Button>
+            <Button Grid.Column="1" Style="{StaticResource MenuButton}" Content="{StaticResource imgCalendar}"  Name="btnCalendar"></Button>
+            <Button Grid.Column="2" Style="{StaticResource MenuButton}" Content="{StaticResource imgCompass}"  Name="btnCompass"></Button>
             <Button Grid.Column="3" Margin="10px" Style="{StaticResource MenuButton}" Content="{StaticResource imgMenu}"  Name="btnMenu" HorizontalAlignment="Right"></Button>
         </Grid>
         <Grid Grid.Row="1" Margin="15px 0 15px 0">
@@ -94,27 +94,27 @@
                 <ColumnDefinition Width="5*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Button Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Name="btnShuffle" Style="{StaticResource RoundedButton}" Click="btnShuffle_Click">
-                    <Button.Template>
-                        <ControlTemplate TargetType="Button">
-                            <WrapPanel>
-                                <Grid>
-                                    <Border>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <WrapPanel>
+                            <Grid>
+                                <Border>
                                     <Image Name="imgEllipseShuffle" Source="img/MON_Ellipse-13-copy-2@2x.png" Height="50px" Width="50px"/>
-                                    </Border>
-                                    <Image Source="img/MON_shuffleIcon@2x.png" Height="28px" Width="28px" />
-                                </Grid>
-                            </WrapPanel>
-                            <ControlTemplate.Triggers>
-                                <Trigger Property="IsMouseOver" Value="True">
-                                    <Setter Property="Cursor" Value="Hand"/>
-                                    <Setter TargetName="imgEllipseShuffle" Property="Height" Value="54px" />
-                                    <Setter TargetName="imgEllipseShuffle" Property="Width" Value="54px" />
-                                </Trigger>
-                            </ControlTemplate.Triggers>
-                        </ControlTemplate>
-                    </Button.Template>
-                </Button>
-            <Button Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Name="btnGo" Style="{StaticResource RoundedButton}">
+                                </Border>
+                                <Image Source="img/MON_shuffleIcon@2x.png" Height="28px" Width="28px" />
+                            </Grid>
+                        </WrapPanel>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Cursor" Value="Hand"/>
+                                <Setter TargetName="imgEllipseShuffle" Property="Height" Value="54px" />
+                                <Setter TargetName="imgEllipseShuffle" Property="Width" Value="54px" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Left" Name="btnGo" Style="{StaticResource RoundedButton}" Click="btnGo_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="Button">
                         <WrapPanel>

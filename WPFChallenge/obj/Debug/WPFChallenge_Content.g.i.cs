@@ -8,14 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/mon_calendaricon@2x.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/mon_compassicon@2x.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/mon_ellipse-13-copy@2x.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/mon_ellipse-13-copy-2@2x.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/mon_go@2x.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/mon_menuicon@2x.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/mon_rectangle-5@2x.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/mon_searchicon@2x.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/mon_shuffleicon@2x.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("sounds/countdown.mp3")]
 
 

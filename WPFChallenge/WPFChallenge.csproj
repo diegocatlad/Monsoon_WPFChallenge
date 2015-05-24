@@ -112,6 +112,11 @@
     <Resource Include="img\MON_searchIcon%402x.png" />
     <Resource Include="img\MON_shuffleIcon%402x.png" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="sounds\countdown.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
