@@ -3,11 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"      
+             xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing"
              mc:Ignorable="d" 
-             d:DesignHeight="120" d:DesignWidth="120">
-    <Grid>
+             d:DesignHeight="130" d:DesignWidth="130">
+    <Grid x:Name="CircleGrid">
         <Grid.Resources>
             <Style TargetType="TextBlock" x:Key="CircleText">
+                <Setter Property="Margin" Value="10px"/>
                 <Setter Property="HorizontalAlignment" Value="Center" />
                 <Setter Property="VerticalAlignment" Value="Center" />
                 <Setter Property="Foreground" Value="White" />
@@ -15,19 +17,42 @@
                 <Setter Property="Cursor" Value="Hand" />
                 <Setter Property="Panel.ZIndex" Value="100" />
                 <Setter Property="FontSize" Value="16px" />
+                <Setter Property="Opacity" Value="0.9" />
+                <Setter Property="FontFamily" Value="Calibry"></Setter>
             </Style>
             <Style TargetType="Button" x:Key="CircleButton">
-                <Setter Property="Width" Value="120" />
-                <Setter Property="Height" Value="120" />
+                <Setter Property="Margin" Value="10px"/>
+                <Setter Property="Width" Value="124" />
+                <Setter Property="Height" Value="124" />
                 <Setter Property="Background" Value="Black" />
                 <Setter Property="Cursor" Value="Hand" />
             </Style>
         </Grid.Resources>
+        <Path Stroke="Purple" StrokeThickness="1">
+            <Path.Data>
+                <PathGeometry>
+                    <PathGeometry.Figures>
+                        <PathFigureCollection x:Name="pathFigureCollection">
+                        </PathFigureCollection>
+                    </PathGeometry.Figures>
+                </PathGeometry>
+            </Path.Data>
+        </Path>
+        <Path Stroke="HotPink" StrokeThickness="1">
+            <Path.Data>
+                <PathGeometry>
+                    <PathGeometry.Figures>
+                        <PathFigureCollection x:Name="selectedPathFigureCollection">
+                        </PathFigureCollection>
+                    </PathGeometry.Figures>
+                </PathGeometry>
+            </Path.Data>
+        </Path>
         <Button Style="{StaticResource CircleButton}" >
             <Button.Template>
                 <ControlTemplate>
                     <Grid>
-                        <Ellipse Name="Ellipse" Opacity="0.3" Fill="{TemplateBinding Background}" />
+                        <Ellipse Name="Ellipse" Opacity="0.2" Fill="{TemplateBinding Background}" />
                     </Grid>
                 </ControlTemplate>
             </Button.Template>

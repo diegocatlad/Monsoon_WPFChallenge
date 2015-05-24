@@ -2,7 +2,7 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:local="clr-namespace:WPFChallenge"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="568" Width="320" ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterScreen">
+        Title="MainWindow" Height="614" Width="345" ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <Style TargetType="Button" x:Key="MenuButton">
             <Setter Property="Background" Value="Transparent"/>
@@ -46,13 +46,13 @@
             <ImageBrush Stretch="Fill" Opacity="1" ImageSource="img/MON_Rectangle-5@2x.png" />
         </Grid.Background>
         <Grid.RowDefinitions>
-            <RowDefinition Height="15*" />
-            <RowDefinition Height="23*" />
-            <RowDefinition Height="23*" />
-            <RowDefinition Height="23*" />
-            <RowDefinition Height="16*" />
+            <RowDefinition Height="13*" />
+            <RowDefinition Height="25*" />
+            <RowDefinition Height="25*" />
+            <RowDefinition Height="25*" />
+            <RowDefinition Height="12*" />
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0" Margin="15px">
+        <Grid Grid.Row="0" Margin="15px 0 15px 0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="15*"></ColumnDefinition>
                 <ColumnDefinition Width="15*"></ColumnDefinition>
@@ -64,31 +64,31 @@
                 <Button Grid.Column="2" Style="{StaticResource MenuButton}" Content="{StaticResource imgCompass}"  Name="btnCompass"></Button>
             <Button Grid.Column="3" Margin="10px" Style="{StaticResource MenuButton}" Content="{StaticResource imgMenu}"  Name="btnMenu" HorizontalAlignment="Right"></Button>
         </Grid>
-        <Grid Grid.Row="1">
+        <Grid Grid.Row="1" Margin="15px 0 15px 0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="5*"></ColumnDefinition>
                 <ColumnDefinition Width="5*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <local:OptionCircle Grid.Column="0" x:Name="OptionCircle1" Height="120px" Width="120px"></local:OptionCircle>
-            <local:OptionCircle Grid.Column="1" x:Name="OptionCircle2" Height="120px" Width="120px"></local:OptionCircle>
+            <local:OptionCircle Grid.Column="0" x:Name="OptionCircle1"></local:OptionCircle>
+            <local:OptionCircle Grid.Column="1" x:Name="OptionCircle2"></local:OptionCircle>
         </Grid>
-        <Grid Grid.Row="2">
+        <Grid Grid.Row="2" Margin="15px 0 15px 0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="5*"></ColumnDefinition>
                 <ColumnDefinition Width="5*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <local:OptionCircle Grid.Column="0" x:Name="OptionCircle3" Height="120px" Width="120px"></local:OptionCircle>
-            <local:OptionCircle Grid.Column="1" x:Name="OptionCircle4" Height="120px" Width="120px"></local:OptionCircle>
+            <local:OptionCircle Grid.Column="0" x:Name="OptionCircle3"></local:OptionCircle>
+            <local:OptionCircle Grid.Column="1" x:Name="OptionCircle4"></local:OptionCircle>
         </Grid>
-        <Grid Grid.Row="3">
+        <Grid Grid.Row="3" Margin="15px 0 15px 0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="5*"></ColumnDefinition>
                 <ColumnDefinition Width="5*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <local:OptionCircle Grid.Column="0" x:Name="OptionCircle5" Height="120px" Width="120px"></local:OptionCircle>
-            <local:OptionCircle Grid.Column="1" x:Name="OptionCircle6" Height="120px" Width="120px"></local:OptionCircle>
+            <local:OptionCircle Grid.Column="0" x:Name="OptionCircle5"></local:OptionCircle>
+            <local:OptionCircle Grid.Column="1" x:Name="OptionCircle6"></local:OptionCircle>
         </Grid>
-        <Grid Grid.Row="4">
+        <Grid Grid.Row="4" Margin="15px 0 15px 0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="5*"></ColumnDefinition>
                 <ColumnDefinition Width="5*"></ColumnDefinition>

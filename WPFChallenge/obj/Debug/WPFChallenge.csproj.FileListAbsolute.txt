@@ -15,3 +15,13 @@ D:\Decadentes\Mis programas\Monsoon\WPFChallenge-master\Monsoon_WPFChallenge\WPF
 D:\Decadentes\Mis programas\Monsoon\WPFChallenge-master\Monsoon_WPFChallenge\WPFChallenge\obj\Debug\OptionCircle.g.cs
 D:\Decadentes\Mis programas\Monsoon\WPFChallenge-master\Monsoon_WPFChallenge\WPFChallenge\obj\Debug\GeneratedInternalTypeHelper.g.cs
 D:\Decadentes\Mis programas\Monsoon\WPFChallenge-master\Monsoon_WPFChallenge\WPFChallenge\obj\Debug\WPFChallenge_MarkupCompile.lref
+D:\Decadentes\Mis programas\Monsoon\WPFChallenge-master\Monsoon_WPFChallenge\WPFChallenge\bin\Debug\Microsoft.Expression.Drawing.dll
+D:\Decadentes\Mis programas\Monsoon\WPFChallenge-master\Monsoon_WPFChallenge\WPFChallenge\bin\Debug\de\Microsoft.Expression.Drawing.resources.dll
+D:\Decadentes\Mis programas\Monsoon\WPFChallenge-master\Monsoon_WPFChallenge\WPFChallenge\bin\Debug\es\Microsoft.Expression.Drawing.resources.dll
+D:\Decadentes\Mis programas\Monsoon\WPFChallenge-master\Monsoon_WPFChallenge\WPFChallenge\bin\Debug\fr\Microsoft.Expression.Drawing.resources.dll
+D:\Decadentes\Mis programas\Monsoon\WPFChallenge-master\Monsoon_WPFChallenge\WPFChallenge\bin\Debug\it\Microsoft.Expression.Drawing.resources.dll
+D:\Decadentes\Mis programas\Monsoon\WPFChallenge-master\Monsoon_WPFChallenge\WPFChallenge\bin\Debug\ja\Microsoft.Expression.Drawing.resources.dll
+D:\Decadentes\Mis programas\Monsoon\WPFChallenge-master\Monsoon_WPFChallenge\WPFChallenge\bin\Debug\ko\Microsoft.Expression.Drawing.resources.dll
+D:\Decadentes\Mis programas\Monsoon\WPFChallenge-master\Monsoon_WPFChallenge\WPFChallenge\bin\Debug\ru\Microsoft.Expression.Drawing.resources.dll
+D:\Decadentes\Mis programas\Monsoon\WPFChallenge-master\Monsoon_WPFChallenge\WPFChallenge\bin\Debug\zh-Hans\Microsoft.Expression.Drawing.resources.dll
+D:\Decadentes\Mis programas\Monsoon\WPFChallenge-master\Monsoon_WPFChallenge\WPFChallenge\bin\Debug\zh-Hant\Microsoft.Expression.Drawing.resources.dll

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Expression.Drawing;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -10,10 +11,12 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Media;
+using System.Threading;
+using Microsoft.Expression.Media;
 
 namespace WPFChallenge
 {
@@ -24,7 +27,7 @@ namespace WPFChallenge
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private Timer _timer;
+        private System.Timers.Timer _timer;
 
         private string _selectedOption;
         public string SelectedOption
@@ -32,6 +35,7 @@ namespace WPFChallenge
             private set
             {
                 _selectedOption = value;
+                RefreshSurroundingArcs(Options.IndexOf(value));
                 OnPropertyChanged("SelectedOption");
             }
             get
@@ -71,7 +75,7 @@ namespace WPFChallenge
 
         private void btnCircle_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            _timer = new Timer(1000);
+            _timer = new System.Timers.Timer(1000);
             _timer.Elapsed += new ElapsedEventHandler(ChangeSelectedOption);
             _timer.Enabled = true;
             _timer.Start();
@@ -89,9 +93,74 @@ namespace WPFChallenge
             SelectedOption = currentIndex == Options.Count - 1 ? Options.First() : Options[currentIndex + 1];
         }
 
-        public void GetRandomValue() { 
+        public void GetRandomValue()
+        {
             var rnd = new Random();
             SelectedOption = Options[rnd.Next(Options.Count)];
+        }
+
+        private void RefreshSurroundingArcs(int p)
+        {
+            Thread t = new Thread(RefreshArcsThreadSafe);
+            t.SetApartmentState(ApartmentState.STA);
+
+            t.Start();
+        }
+
+        private void RefreshArcsThreadSafe(object obj)
+        {
+            this.Dispatcher.BeginInvoke((ThreadStart)delegate
+            {
+                selectedPathFigureCollection.Clear();
+                pathFigureCollection.Clear();
+
+                Point center = new Point(79, 77);
+                double radius = 65;
+
+                var angleSize = 360 / Options.Count;
+                var selectedOptionIndex = Options.IndexOf(SelectedOption);
+                for (int i = 0; i < Options.Count; i++)
+                {
+                    var endAngle = angleSize * i + angleSize;
+
+                    var startPointX = center.X + radius * Math.Cos(angleSize * i * Math.PI / 180);
+                    var startPointY = center.Y + radius * Math.Sin(angleSize * i * Math.PI / 180);
+                    var startPoint = new Point(startPointX, startPointY);
+
+                    for (int j = angleSize * i; j < endAngle - 10; j++)
+                    {
+                        var arcSeg = new ArcSegment();
+                        arcSeg.SweepDirection = SweepDirection.Clockwise;
+
+
+                        var nextPointX = center.X + radius * Math.Cos(j * Math.PI / 180);
+                        var nextPointY = center.Y + radius * Math.Sin(j * Math.PI / 180);
+                        var nextPoint = new Point(nextPointX, nextPointY);
+
+                        arcSeg.Point = nextPoint;
+                        arcSeg.Size = new Size(130, 130);
+
+                        if (i == selectedOptionIndex)
+                        {
+                            var selectedPathFigure = new PathFigure();
+                            selectedPathFigure.StartPoint = startPoint;
+                            selectedPathFigure.Segments.Add(arcSeg);
+                            selectedPathFigureCollection.Add(selectedPathFigure);
+                        }
+                        else
+                        {
+                            var pathFigure = new PathFigure();
+                            pathFigure.StartPoint = startPoint;
+                            pathFigure.Segments.Add(arcSeg);
+                            pathFigureCollection.Add(pathFigure);
+                        }
+
+                        startPoint = nextPoint;
+                    }
+
+
+                }
+            });
         }
 
     }
